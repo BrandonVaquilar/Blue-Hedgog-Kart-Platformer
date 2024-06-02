@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="midTerm" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/midTerm" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/Users/nishu/Desktop/178Games/common/bin" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/midTerm" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/Users/nishu/Desktop/178Games/common/bin" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../common/include" />
+		</Compiler>
+		<Linker>
+			<Add library="../common/lib/libSOIL.a" />
+			<Add library="glut32" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="winmm" />
+			<Add library="gdi32" />
+			<Add directory="../common/lib" />
+		</Linker>
+		<Unit filename="include/GLCheckCollision.h" />
+		<Unit filename="include/GLEnms.h" />
+		<Unit filename="include/GLInputs.h" />
+		<Unit filename="include/GLLight.h" />
+		<Unit filename="include/GLModel.h" />
+		<Unit filename="include/GLParallax.h" />
+		<Unit filename="include/GLPlayer.h" />
+		<Unit filename="include/GLScene.h" />
+		<Unit filename="include/GLTexture.h" />
+		<Unit filename="include/GLTimer.h" />
+		<Unit filename="include/common.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/GLCheckCollision.cpp" />
+		<Unit filename="src/GLEnms.cpp" />
+		<Unit filename="src/GLInputs.cpp" />
+		<Unit filename="src/GLLight.cpp" />
+		<Unit filename="src/GLModel.cpp" />
+		<Unit filename="src/GLParallax.cpp" />
+		<Unit filename="src/GLPlayer.cpp" />
+		<Unit filename="src/GLScene.cpp" />
+		<Unit filename="src/GLTexture.cpp" />
+		<Unit filename="src/GLTimer.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

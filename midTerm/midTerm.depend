@@ -1,0 +1,312 @@
+# depslib dependency file v1.0
+1707790742 source:c:\users\nishu\desktop\178games\midterm\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\glscene.h
+	<common.h>
+
+1710373200 c:\users\nishu\desktop\178games\midterm\include\common.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+	<time.h>
+	<math.h>
+	<SOIL.h>
+
+1706577399 c:\users\nishu\desktop\178games\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707185187 c:\users\nishu\desktop\178games\common\include\soil.h
+
+1710375120 source:c:\users\nishu\desktop\178games\midterm\src\glcheckcollision.cpp
+	"GLCheckCollision.h"
+
+1710374010 c:\users\nishu\desktop\178games\midterm\include\glcheckcollision.h
+	<common.h>
+
+1710374842 source:c:\users\nishu\desktop\178games\midterm\src\glenms.cpp
+	"GLEnms.h"
+
+1710201428 c:\users\nishu\desktop\178games\midterm\include\glenms.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\gltexture.h
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\gltimer.h
+	<common.h>
+
+1710193085 source:c:\users\nishu\desktop\178games\midterm\src\glinputs.cpp
+	"GLInputs.h"
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\glinputs.h
+	<GLModel.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\glmodel.h
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\glparallax.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\glplayer.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710193085 source:c:\users\nishu\desktop\178games\midterm\src\gllight.cpp
+	"GLLight.h"
+
+1710193110 c:\users\nishu\desktop\178games\midterm\include\gllight.h
+	<GLScene.h>
+
+1710193085 source:c:\users\nishu\desktop\178games\midterm\src\glmodel.cpp
+	"GLModel.h"
+
+1710193085 source:c:\users\nishu\desktop\178games\midterm\src\glparallax.cpp
+	"GLParallax.h"
+
+1710375318 source:c:\users\nishu\desktop\178games\midterm\src\glplayer.cpp
+	"GLPlayer.h"
+
+1710193085 source:c:\users\nishu\desktop\178games\midterm\src\gltexture.cpp
+	"GLTexture.h"
+
+1710193085 source:c:\users\nishu\desktop\178games\midterm\src\gltimer.cpp
+	"GLTimer.h"
+
+1710549294 source:c:\users\nishu\desktop\178games\midterm\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<GLTexture.h>
+	<GLModel.h>
+	<GLInputs.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<GLEnms.h>
+	<GLTimer.h>
+	<GLCheckCollision.h>
+
+1711165161 source:f:\users\brand\desktop\csci-173\midterm\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1711170626 f:\users\brand\desktop\csci-173\midterm\include\glscene.h
+	<common.h>
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\common.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+	<time.h>
+	<math.h>
+	<SOIL.h>
+
+1696018100 f:\users\brand\desktop\csci-173\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1696017316 f:\users\brand\desktop\csci-173\common\include\soil.h
+
+1711159394 source:f:\users\brand\desktop\csci-173\midterm\src\glcheckcollision.cpp
+	"GLCheckCollision.h"
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\glcheckcollision.h
+	<common.h>
+
+1711173535 source:f:\users\brand\desktop\csci-173\midterm\src\glenms.cpp
+	"GLEnms.h"
+
+1711165976 f:\users\brand\desktop\csci-173\midterm\include\glenms.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<cstdlib>
+	<cmath>
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\gltexture.h
+	<common.h>
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\gltimer.h
+	<common.h>
+
+1710802956 source:f:\users\brand\desktop\csci-173\midterm\src\glinputs.cpp
+	"GLInputs.h"
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\glinputs.h
+	<GLModel.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<common.h>
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\glmodel.h
+	<common.h>
+
+1710807428 f:\users\brand\desktop\csci-173\midterm\include\glparallax.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1711171964 f:\users\brand\desktop\csci-173\midterm\include\glplayer.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710802956 source:f:\users\brand\desktop\csci-173\midterm\src\gllight.cpp
+	"GLLight.h"
+
+1710802954 f:\users\brand\desktop\csci-173\midterm\include\gllight.h
+	<GLScene.h>
+
+1710802956 source:f:\users\brand\desktop\csci-173\midterm\src\glmodel.cpp
+	"GLModel.h"
+
+1710987772 source:f:\users\brand\desktop\csci-173\midterm\src\glparallax.cpp
+	"GLParallax.h"
+
+1711173635 source:f:\users\brand\desktop\csci-173\midterm\src\glplayer.cpp
+	"GLPlayer.h"
+
+1711172580 source:f:\users\brand\desktop\csci-173\midterm\src\glscene.cpp
+	<GLScene.h>
+	<GLLight.h>
+	<GLTexture.h>
+	<GLModel.h>
+	<GLInputs.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<GLEnms.h>
+	<GLTimer.h>
+	<GLCheckCollision.h>
+
+1710802956 source:f:\users\brand\desktop\csci-173\midterm\src\gltexture.cpp
+	"GLTexture.h"
+
+1710802956 source:f:\users\brand\desktop\csci-173\midterm\src\gltimer.cpp
+	"GLTimer.h"
+
+1710987771 source:c:\users\brand\desktop\csci-178\midterm\src\glparallax.cpp
+	"GLParallax.h"
+
+1710807427 c:\users\brand\desktop\csci-178\midterm\include\glparallax.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\common.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+	<time.h>
+	<math.h>
+	<SOIL.h>
+
+1706863689 c:\users\brand\desktop\csci-178\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1706863794 c:\users\brand\desktop\csci-178\common\include\soil.h
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\gltexture.h
+	<common.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\gltimer.h
+	<common.h>
+
+1710808250 source:c:\users\brand\desktop\csci-178\midterm\src\glplayer.cpp
+	"GLPlayer.h"
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\glplayer.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710988093 source:c:\users\brand\desktop\csci-178\midterm\src\glscene.cpp
+	<GLScene.h>
+	<GLLight.h>
+	<GLTexture.h>
+	<GLModel.h>
+	<GLInputs.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<GLEnms.h>
+	<GLTimer.h>
+	<GLCheckCollision.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\glscene.h
+	<common.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\gllight.h
+	<GLScene.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\glmodel.h
+	<common.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\glinputs.h
+	<GLModel.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<common.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\glenms.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710802953 c:\users\brand\desktop\csci-178\midterm\include\glcheckcollision.h
+	<common.h>
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\src\gltexture.cpp
+	"GLTexture.h"
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\src\gltimer.cpp
+	"GLTimer.h"
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\src\glcheckcollision.cpp
+	"GLCheckCollision.h"
+
+1710803642 source:c:\users\brand\desktop\csci-178\midterm\src\glenms.cpp
+	"GLEnms.h"
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\src\glinputs.cpp
+	"GLInputs.h"
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\src\gllight.cpp
+	"GLLight.h"
+
+1710802954 source:c:\users\brand\desktop\csci-178\midterm\src\glmodel.cpp
+	"GLModel.h"
+
