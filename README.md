@@ -1,0 +1,1 @@
+This is a platformer game made for my CSCI-173 Game Development course. You have 5 lives and there are 3 stages. When your health drops to 0, you restart back to the start of the current level with 5 HP.
