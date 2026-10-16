@@ -1,0 +1,2 @@
+# Optional dependency for regenerating the committed screenshots.
+Pillow>=10,<13
