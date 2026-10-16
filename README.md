@@ -1,6 +1,8 @@
-# C++ / OpenGL Game Engine
+![C++ / OpenGL Game Engine. A personal engine prototype by Brandon Vaquilar.](docs/branding/overview.svg)
 
 **A personal game engine prototype by Brandon Vaquilar, demonstrated by Blue Hedgehog Kart.**
+
+[Demo screenshots](#platformer-demo-gallery) · [Build instructions](#build-and-run) · [Portfolio](https://brandonvaquilar.com)
 
 A small 2D engine built with C++ and OpenGL, with shared systems for texture loading, layered background scrolling, timing, and circular collision detection. A kart-platformer demo integrates those systems with sprite animation, keyboard input, hazards, and three scenes. GLFW supplies the desktop window and input; SOIL loads image textures.
 
@@ -49,7 +51,9 @@ The third scene combines vertical and horizontal layer movement with hook hazard
 
 The platformer demo currently supports left and right movement, hazards, five lives, and scene transitions. Jumping, attacks, lap timing, and a full racing system are future work.
 
-## Build on Ubuntu / Debian Linux
+## Build and run
+
+The commands below target Ubuntu / Debian Linux.
 
 ```bash
 sudo apt update
