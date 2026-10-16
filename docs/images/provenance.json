@@ -1,0 +1,85 @@
+{
+  "source": "Native C++ game core rendered in a Mesa surfaceless OpenGL context",
+  "capture": "240 fixed 60 Hz frames per scene, with the real Right input simulated",
+  "conversion": "PPM framebuffer converted to WebP; no visual elements added or generated",
+  "runs": [
+    {
+      "image": "docs/images/forest.webp",
+      "command": [
+        "build/blue_hedgehog_capture",
+        "--demo",
+        "--frames",
+        "240",
+        "--seed",
+        "42",
+        "--level",
+        "0",
+        "--screenshot",
+        "build/captures/forest.ppm",
+        "--state",
+        "build/captures/forest.json"
+      ],
+      "stdout": "OpenGL renderer: llvmpipe (LLVM 20.1.2, 256 bits)\nRendered 240 frames; scene 0, lives 1, collisions 4\n",
+      "final_state": {
+        "level": 0,
+        "lives": 1,
+        "player_x": -2.99999,
+        "player_y": -2.4,
+        "collisions": 4,
+        "frames": 240
+      }
+    },
+    {
+      "image": "docs/images/city.webp",
+      "command": [
+        "build/blue_hedgehog_capture",
+        "--demo",
+        "--frames",
+        "240",
+        "--seed",
+        "42",
+        "--level",
+        "1",
+        "--screenshot",
+        "build/captures/city.ppm",
+        "--state",
+        "build/captures/city.json"
+      ],
+      "stdout": "OpenGL renderer: llvmpipe (LLVM 20.1.2, 256 bits)\nRendered 240 frames; scene 1, lives 5, collisions 0\n",
+      "final_state": {
+        "level": 1,
+        "lives": 5,
+        "player_x": -2.99999,
+        "player_y": -4.4,
+        "collisions": 0,
+        "frames": 240
+      }
+    },
+    {
+      "image": "docs/images/underwater.webp",
+      "command": [
+        "build/blue_hedgehog_capture",
+        "--demo",
+        "--frames",
+        "240",
+        "--seed",
+        "42",
+        "--level",
+        "2",
+        "--screenshot",
+        "build/captures/underwater.ppm",
+        "--state",
+        "build/captures/underwater.json"
+      ],
+      "stdout": "OpenGL renderer: llvmpipe (LLVM 20.1.2, 256 bits)\nRendered 240 frames; scene 2, lives 4, collisions 1\n",
+      "final_state": {
+        "level": 2,
+        "lives": 4,
+        "player_x": -2.99999,
+        "player_y": -4.4,
+        "collisions": 1,
+        "frames": 240
+      }
+    }
+  ]
+}

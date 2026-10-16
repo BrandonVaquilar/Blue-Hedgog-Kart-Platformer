@@ -1,0 +1,11 @@
+/build*/
+*.o
+*.exe
+*.obj
+*.depend
+*.layout
+*.user
+__pycache__/
+*.pyc
+*.ppm
+core
