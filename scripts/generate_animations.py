@@ -8,6 +8,7 @@ import random
 import subprocess
 
 from PIL import Image, ImageStat
+from animation_encoding import encode_animation
 
 ROOT = Path(__file__).resolve().parents[1]
 FRAMES = 300  # Five seconds of the engine's fixed 60 Hz simulation.
@@ -77,37 +78,17 @@ def capture(binary, level, name, seed):
     assert any(.04 < dx < .2 for dx in deltas), "Real player must move right"
     assert any(-.2 < dx < -.04 for dx in deltas), "Real player must move left"
     assert any(abs(dx) < .001 for dx in deltas), "Released input must stop the player"
-    # One shared palette limits flicker and keeps the committed GIFs compact.
-    sheet = Image.new("RGB", (160 * 10, 90))
-    for i, image in enumerate(images[::5]):
-        sheet.paste(image.resize((160, 90)), (i * 160, 0))
-    palette = sheet.quantize(colors=64)
-    frames = [image.quantize(palette=palette, dither=Image.Dither.NONE) for image in images]
     output = ROOT / "docs/images" / f"{name}.gif"
-    frames[0].save(output, save_all=True, append_images=frames[1:],
-                   duration=100, loop=0, optimize=True, disposal=1)
-    with Image.open(output) as gif:
-        # The encoder may coalesce identical frames while preserving their delay.
-        assert gif.size == SIZE and 25 <= gif.n_frames <= FRAMES // STRIDE
-        encoded_frames = gif.n_frames
-        duration = 0
-        for i in range(gif.n_frames):
-            gif.seek(i)
-            duration += gif.info["duration"]
-        assert duration == 5000
-        assert gif.info["loop"] == 0
-    # The city poster is frame zero of the hover preview, avoiding a visual jump.
     poster = ROOT / "docs/images/city-poster.webp" if name == "city" else None
-    if poster:
-        images[0].save(poster, quality=90)
+    encoding = encode_animation(images, output, poster)
     final = json.loads((directory / "final.json").read_text())
     assert final["level"] == level and final["frames"] == WARMUP + FRAMES
-    print(f"{name}: {output.stat().st_size:,} bytes, {encoded_frames} GIF frames, 5,000 ms; left/right/idle verified", flush=True)
+    print(f"{name}: {output.stat().st_size:,} bytes, {encoding['gif_frames']} GIF frames, 5,000 ms; left/right/idle verified", flush=True)
     return {"image": f"docs/images/{name}.gif", "seed": seed,
             "command": command, "stdout": result.stdout,
             "warmup_frames": WARMUP, "warmup_input": "hold right",
             "simulation_frames": WARMUP + FRAMES, "recorded_frames": FRAMES,
-            "sampled_frames": FRAMES // STRIDE, "gif_frames": encoded_frames, "duration_ms": duration,
+            "sampled_frames": FRAMES // STRIDE, **encoding,
             "input_segments": segments, "final_state": final,
             "sha256": hashlib.sha256(output.read_bytes()).hexdigest()}
 
@@ -123,7 +104,7 @@ def main():
         "source": "Actual framebuffer output from the shared native C++/OpenGL engine and demo",
         "capture": "180 fixed 60 Hz warmup frames, then 300 recorded simulation frames; every sixth framebuffer encoded at 10 fps, 640x360",
         "inputs": "Seeded randomized held keys, short left/right presses, releases, and idle periods",
-        "conversion": "Shared-palette GIF encoding only; no drawn or generated gameplay",
+        "conversion": "Full 256-color per-frame GIF palettes; no color grading, drawn, or generated gameplay",
         "runs": runs,
     }, indent=2) + "\n")
 

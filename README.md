@@ -92,7 +92,7 @@ sudo apt install python3-pil
 python3 scripts/generate_animations.py
 ```
 
-The animation script first holds Right for 180 fixed 60 Hz warmup frames to bring the kart into view, then records 300 simulation frames per scene. It exports every sixth framebuffer at 640×360 and encodes 50 samples at 10 fps into a five-second looping GIF, using a shared palette to limit flicker and file size. Seeds make the varied inputs reproducible. It verifies left movement, right movement, idle periods, scene selection, life bounds, and the encoded duration before saving the gallery.
+The animation script first holds Right for 180 fixed 60 Hz warmup frames to bring the kart into view, then records 300 simulation frames per scene. It exports every sixth framebuffer at 640×360 and encodes 50 samples at 10 fps into a five-second looping GIF. Full 256-color palettes per frame retain saturated colors without color grading. The city poster is a lossless copy of the GIF's first decoded frame, so starting the hover preview does not change its colors. Seeds make the varied inputs reproducible. The script verifies left movement, right movement, idle periods, scene selection, life bounds, and encoded duration before saving the gallery.
 
 The original full-size stills remain available for static previews. To regenerate them:
 
