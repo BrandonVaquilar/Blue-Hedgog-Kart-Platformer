@@ -1,0 +1,380 @@
+{
+  "source": "Actual framebuffer output from the shared native C++/OpenGL engine and demo",
+  "capture": "180 fixed 60 Hz warmup frames, then 300 recorded simulation frames; every sixth framebuffer encoded at 10 fps, 640x360",
+  "inputs": "Seeded randomized held keys, short left/right presses, releases, and idle periods",
+  "conversion": "Shared-palette GIF encoding only; no drawn or generated gameplay",
+  "runs": [
+    {
+      "image": "docs/images/forest.gif",
+      "seed": 1107,
+      "command": [
+        "build-motion/blue_hedgehog_capture",
+        "--frames",
+        "480",
+        "--level",
+        "0",
+        "--seed",
+        "1107",
+        "--width",
+        "640",
+        "--height",
+        "360",
+        "--input-script",
+        "build/animations/forest/inputs.txt",
+        "--frame-directory",
+        "build/animations/forest",
+        "--capture-every",
+        "6",
+        "--state",
+        "build/animations/forest/final.json"
+      ],
+      "stdout": "OpenGL renderer: llvmpipe (LLVM 20.1.2, 256 bits)\nRendered 480 frames; scene 0, lives 2, collisions 3\n",
+      "warmup_frames": 180,
+      "warmup_input": "hold right",
+      "simulation_frames": 480,
+      "recorded_frames": 300,
+      "sampled_frames": 50,
+      "gif_frames": 50,
+      "duration_ms": 5000,
+      "input_segments": [
+        {
+          "action": "hold right",
+          "direction": 1,
+          "frames": 84
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 6
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 4
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 3
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 6
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 5
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "hold left",
+          "direction": -1,
+          "frames": 40
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 4
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 6
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 4
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 6
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 5
+        },
+        {
+          "action": "idle",
+          "direction": 0,
+          "frames": 25
+        },
+        {
+          "action": "hold right",
+          "direction": 1,
+          "frames": 88
+        }
+      ],
+      "final_state": {
+        "level": 0,
+        "lives": 2,
+        "player_x": -0.839994,
+        "player_y": -2.4,
+        "collisions": 3,
+        "frames": 480
+      },
+      "sha256": "bc61e774a065fe421dfbdf455ae1740c4ce3eb137a86514add0434f83375cbb7"
+    },
+    {
+      "image": "docs/images/city.gif",
+      "seed": 2203,
+      "command": [
+        "build-motion/blue_hedgehog_capture",
+        "--frames",
+        "480",
+        "--level",
+        "1",
+        "--seed",
+        "2203",
+        "--width",
+        "640",
+        "--height",
+        "360",
+        "--input-script",
+        "build/animations/city/inputs.txt",
+        "--frame-directory",
+        "build/animations/city",
+        "--capture-every",
+        "6",
+        "--state",
+        "build/animations/city/final.json"
+      ],
+      "stdout": "OpenGL renderer: llvmpipe (LLVM 20.1.2, 256 bits)\nRendered 480 frames; scene 1, lives 1, collisions 4\n",
+      "warmup_frames": 180,
+      "warmup_input": "hold right",
+      "simulation_frames": 480,
+      "recorded_frames": 300,
+      "sampled_frames": 50,
+      "gif_frames": 50,
+      "duration_ms": 5000,
+      "input_segments": [
+        {
+          "action": "hold right",
+          "direction": 1,
+          "frames": 97
+        },
+        {
+          "action": "hold left",
+          "direction": -1,
+          "frames": 30
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 3
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 5
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 3
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 4
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 6
+        },
+        {
+          "action": "idle",
+          "direction": 0,
+          "frames": 25
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 6
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 6
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 5
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 4
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 6
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "hold right",
+          "direction": 1,
+          "frames": 86
+        }
+      ],
+      "final_state": {
+        "level": 1,
+        "lives": 1,
+        "player_x": -0.419995,
+        "player_y": -4.4,
+        "collisions": 4,
+        "frames": 480
+      },
+      "sha256": "3afda86e03c48bdf599e778988be397349e5b8be78b1a12fe1c5afe4c128531e"
+    },
+    {
+      "image": "docs/images/underwater.gif",
+      "seed": 3301,
+      "command": [
+        "build-motion/blue_hedgehog_capture",
+        "--frames",
+        "480",
+        "--level",
+        "2",
+        "--seed",
+        "3301",
+        "--width",
+        "640",
+        "--height",
+        "360",
+        "--input-script",
+        "build/animations/underwater/inputs.txt",
+        "--frame-directory",
+        "build/animations/underwater",
+        "--capture-every",
+        "6",
+        "--state",
+        "build/animations/underwater/final.json"
+      ],
+      "stdout": "OpenGL renderer: llvmpipe (LLVM 20.1.2, 256 bits)\nRendered 480 frames; scene 2, lives 2, collisions 3\n",
+      "warmup_frames": 180,
+      "warmup_input": "hold right",
+      "simulation_frames": 480,
+      "recorded_frames": 300,
+      "sampled_frames": 50,
+      "gif_frames": 50,
+      "duration_ms": 5000,
+      "input_segments": [
+        {
+          "action": "hold right",
+          "direction": 1,
+          "frames": 86
+        },
+        {
+          "action": "idle",
+          "direction": 0,
+          "frames": 31
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 3
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 6
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "tap left",
+          "direction": -1,
+          "frames": 3
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "hold left",
+          "direction": -1,
+          "frames": 39
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 5
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 6
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 5
+        },
+        {
+          "action": "tap right",
+          "direction": 1,
+          "frames": 3
+        },
+        {
+          "action": "release",
+          "direction": 0,
+          "frames": 7
+        },
+        {
+          "action": "hold right",
+          "direction": 1,
+          "frames": 78
+        }
+      ],
+      "final_state": {
+        "level": 2,
+        "lives": 2,
+        "player_x": -0.989994,
+        "player_y": -4.4,
+        "collisions": 3,
+        "frames": 480
+      },
+      "sha256": "b6f90a86aac9242e81918cf0d4cec81295211ec638b7d44e1334cc5bf8369d66"
+    }
+  ]
+}

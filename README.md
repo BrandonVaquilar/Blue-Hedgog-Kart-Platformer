@@ -2,7 +2,7 @@
 
 **A personal game engine prototype by Brandon Vaquilar, demonstrated by Blue Hedgehog Kart.**
 
-[Demo screenshots](#platformer-demo-gallery) · [Build instructions](#build-and-run) · [Portfolio](https://brandonvaquilar.com)
+[Demo GIFs](#platformer-demo-gallery) · [Build instructions](#build-and-run) · [Portfolio](https://brandonvaquilar.com)
 
 A small 2D engine built with C++ and OpenGL, with shared systems for texture loading, layered background scrolling, timing, and circular collision detection. A kart-platformer demo integrates those systems with sprite animation, keyboard input, hazards, and three scenes. GLFW supplies the desktop window and input; SOIL loads image textures.
 
@@ -21,23 +21,23 @@ The demo owns scene composition, sprite behavior, input mapping, hazards, and li
 
 ## Platformer demo gallery
 
-These are actual captures from the engine running the platformer demo. No installation is needed to view them.
+These are five-second GIFs captured from the engine running the platformer demo. Each scene uses a different seeded, randomized mix of held movement, short left/right presses, releases, and idle periods. No installation is needed to view them.
 
 ### Forest
 
-![Blue hedgehog in a red kart moving through a layered forest while arrows fall](docs/images/forest.webp)
+![Five-second forest gameplay with left and right kart movement, idle periods, and falling arrows](docs/images/forest.gif)
 
 Several background layers scroll at different rates while falling arrows act as hazards. Circular overlap checks reduce the player's remaining lives after a hit.
 
 ### City
 
-![The kart in a bright city scene with rotating rainbow star hazards](docs/images/city.webp)
+![Five-second city gameplay with varied kart movement and rotating rainbow star hazards](docs/images/city.gif)
 
 A separate set of background textures and rotating star hazards changes the scene's look and movement patterns.
 
 ### Underwater
 
-![The kart in an underwater scene with bubbles, coral, and descending hooks](docs/images/underwater.webp)
+![Five-second underwater gameplay with left and right movement, idle periods, and descending hooks](docs/images/underwater.gif)
 
 The third scene combines vertical and horizontal layer movement with hook hazards. Each scene uses the same engine systems and demo player.
 
@@ -46,7 +46,7 @@ The third scene combines vertical and horizontal layer movement with hook hazard
 - Separate CMake libraries for shared engine systems and the platformer demo.
 - A GLFW desktop launcher with left/right keyboard movement through three environments.
 - An optional Linux/Mesa capture runner that executes the same engine and demo without a desktop window.
-- Reproducible screenshots and a [capture manifest](docs/images/provenance.json) containing commands and final demo state.
+- Reproducible screenshots and five-second GIFs, with [animation commands, input sequences, and final state](docs/images/animations.json).
 - Automated checks for collision behavior, demo movement, scrolling, and deterministic timing.
 
 The platformer demo currently supports left and right movement, hazards, five lives, and scene transitions. Jumping, attacks, lap timing, and a full racing system are future work.
@@ -85,14 +85,22 @@ Run from the repository root:
 
 The demo starts with five lives. Hazards consume lives on contact; reaching the right edge advances to the next scene. Losing all lives resets the character and life count.
 
-## Regenerate screenshots without a desktop
+## Regenerate demo GIFs without a desktop
 
 ```bash
 sudo apt install python3-pil
+python3 scripts/generate_animations.py
+```
+
+The animation script first holds Right for 180 fixed 60 Hz warmup frames to bring the kart into view, then records 300 simulation frames per scene. It exports every sixth framebuffer at 640×360 and encodes 50 samples at 10 fps into a five-second looping GIF, using a shared palette to limit flicker and file size. Seeds make the varied inputs reproducible. It verifies left movement, right movement, idle periods, scene selection, life bounds, and the encoded duration before saving the gallery.
+
+The original full-size stills remain available for static previews. To regenerate them:
+
+```bash
 python3 scripts/generate_previews.py
 ```
 
-The script uses `build/blue_hedgehog_capture`, renders 240 fixed 60 Hz frames in each scene with Right held, and reads the actual OpenGL framebuffer. Pillow only converts the image format. It checks scene selection, frame counts, life bounds, movement, and visible image content before saving the gallery.
+The still-image script uses `build/blue_hedgehog_capture`, renders 240 fixed 60 Hz frames in each scene with Right held, and reads the actual OpenGL framebuffer. Pillow only converts the image format. Both capture paths use the same engine libraries as the desktop launcher.
 
 For a single capture:
 
@@ -101,6 +109,8 @@ LIBGL_ALWAYS_SOFTWARE=1 ./build/blue_hedgehog_capture --demo --frames 240 --leve
 ```
 
 The capture target is built on Linux when EGL is available. It uses Mesa's surfaceless platform and needs no X server, browser, or running desktop.
+
+For custom recordings, `--input-script FILE` accepts exactly one direction (`-1` for left, `0` for released/idle, `1` for right) per simulation frame. `--frame-directory DIR` writes numbered PPM images and corresponding gameplay-state JSON. `--capture-every N` sets the export interval without changing the simulation rate. Malformed inputs or a script with the wrong frame count are rejected.
 
 ## Source organization
 

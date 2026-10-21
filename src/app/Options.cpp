@@ -27,9 +27,12 @@ Options parseOptions(int argc, char** argv) {
         else if (flag == "--seed") options.seed = number(value(), 0, 2147483647);
         else if (flag == "--screenshot") options.screenshot = value();
         else if (flag == "--state") options.state = value();
+        else if (flag == "--input-script") options.inputScript = value();
+        else if (flag == "--frame-directory") options.frameDirectory = value();
+        else if (flag == "--capture-every") options.captureEvery = number(value(), 1, 60);
         else throw std::invalid_argument("Unknown option: " + flag);
     }
-    if ((!options.screenshot.empty() || !options.state.empty()) && options.frames == 0)
+    if ((!options.screenshot.empty() || !options.state.empty() || !options.inputScript.empty() || !options.frameDirectory.empty()) && options.frames == 0)
         throw std::invalid_argument("Captures require --frames so the run has a defined endpoint");
     return options;
 }
@@ -45,5 +48,9 @@ void printHelp() {
               << "  --height N        Height, 180-1080 (default 720)\n"
               << "  --seed N          Random seed (default 42)\n"
               << "  --screenshot FILE Write the final framebuffer as a PPM image\n"
-              << "  --state FILE      Write final gameplay state as JSON\n";
+              << "  --state FILE      Write final gameplay state as JSON\n"
+              << "Capture runner only:\n"
+              << "  --input-script FILE One direction (-1, 0, 1) per fixed 60 Hz frame\n"
+              << "  --frame-directory DIR Write numbered PPM frames and gameplay JSON\n"
+              << "  --capture-every N  Export every Nth frame (default 3, for 20 fps)\n";
 }

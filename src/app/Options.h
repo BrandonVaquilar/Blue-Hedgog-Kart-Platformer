@@ -7,6 +7,8 @@ struct Options {
     unsigned int seed = 42;
     bool demo = false, hidden = false, help = false;
     std::string screenshot, state;
+    std::string inputScript, frameDirectory;
+    int captureEvery = 3;
 };
 Options parseOptions(int argc, char** argv);
 void printHelp();

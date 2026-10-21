@@ -13,6 +13,8 @@ int main(int argc, char** argv) {
     try {
         const auto options = parseOptions(argc, argv);
         if (options.help) { printHelp(); return 0; }
+        if (!options.inputScript.empty() || !options.frameDirectory.empty())
+            throw std::invalid_argument("Input scripts and frame sequences require blue_hedgehog_capture");
         // CMake copies assets beside the executable for launches from other directories.
         if (!std::filesystem::exists("assets/images/sonic.png")) {
             const auto directory = std::filesystem::absolute(argv[0]).parent_path();
