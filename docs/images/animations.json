@@ -2,7 +2,7 @@
   "source": "Actual framebuffer output from the shared native C++/OpenGL engine and demo",
   "capture": "180 fixed 60 Hz warmup frames, then 300 recorded simulation frames; every sixth framebuffer encoded at 10 fps, 640x360",
   "inputs": "Seeded randomized held keys, short left/right presses, releases, and idle periods",
-  "conversion": "GIF encoding from unmodified native frames; encoding settings are recorded per scene",
+  "conversion": "Full 256-color per-frame GIF palettes from unmodified native frames; no color grading, drawn, or generated gameplay",
   "runs": [
     {
       "image": "docs/images/forest.gif",
@@ -126,10 +126,11 @@
         "collisions": 3,
         "frames": 480
       },
-      "sha256": "bc61e774a065fe421dfbdf455ae1740c4ce3eb137a86514add0434f83375cbb7",
+      "sha256": "2df699420837776c2fa296fe9c8d944506cd3761525beafe82a87595e7ce3772",
       "encoding": {
-        "palette": "shared",
-        "colors": 64,
+        "palette": "per-frame",
+        "colors": 256,
+        "method": "exact dominant colors and maximum color coverage",
         "color_adjustments": false
       }
     },
@@ -385,10 +386,11 @@
         "collisions": 3,
         "frames": 480
       },
-      "sha256": "b6f90a86aac9242e81918cf0d4cec81295211ec638b7d44e1334cc5bf8369d66",
+      "sha256": "50594b1907d70b1731236711bd64d0703e5d494409baa89ded4e4c71fe09bbc3",
       "encoding": {
-        "palette": "shared",
-        "colors": 64,
+        "palette": "per-frame",
+        "colors": 256,
+        "method": "exact dominant colors and maximum color coverage",
         "color_adjustments": false
       }
     }
